@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Animated Page Load</title>
+    <style>
+        #animationContainer {
+            position: fixed;
+            top : 0;
+            left : 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #222, #333);
+            z-index: 9999;
+        }
+        .logo { font-size: 6rem; text-decoration: none; color: black; position: relative; overflow: hidden; display: inline-block; }
+        .logo span { opacity: 0; position: relative; top: -100px; animation: fallDown 0.5s ease forwards; color: #fff; }
+        #g, #r { color: rgb(118, 118, 252); }
+        @keyframes fallDown { to { opacity: 1; top: 0; } }
+    </style>
+</head>
+<body>
+    <div id="animationContainer">
+        <div class="logo">
+            <span style="animation-delay: .2s;" id="e">E</span>
+            <span style="animation-delay: .6s;">v</span>
+            <span style="animation-delay: .8s;">e</span>
+            <span style="animation-delay: 1s;">n</span>
+            <span style="animation-delay: 1.2s;">t</span>
+            <span style="animation-delay: 1.4s;" id="g">G</span>
+            <span style="animation-delay: 1.6s;">r</span>
+            <span style="animation-delay: 1.8s;">a</span>
+            <span style="animation-delay: 2s;">n</span>
+            <span style="animation-delay: 2.2s;" id="d">d</span>
+        </div>
+    </div>
+    <script>setTimeout(function(){window.location.href="index.html";},2400);</script>
+</body>
+</html>
